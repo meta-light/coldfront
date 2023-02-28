@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="style.css">
     <title>ColdFront | Home</title>
 </head>
+
+<nav><img src="media/vector/default-monochrome-white.svg" class="center"></nav>
+
 <body>
     
     <div class="container">
@@ -14,17 +17,32 @@
 
             <div class="date-container">
                 <div class="time" id="time">
-
+                    0:00 <span id="am-pm">PM</span>
                 </div>
                 <div class="date" id="date">
 
                 </div>
 
-                <div class="others" id="current-weather-items">
+                <div class="others" id="current-weather-items"> <!--for humidity & other weather specs-->
+                    
+                    
+                </div>
+
+                <div class="others" id="current-weather-items"> <!--for game predictions-->
                     
                     
                 </div>
             </div>
+
+            <main>
+                <div class="news-container">
+                <h1>ColdFront Newsfeed</h1>
+                    <br>
+                    <h2>News article title (H2)</h2>
+                <p>'p' example - Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum</p>
+                </div>
+
+            </main>
 
             <div class="place-container">
                 <div class="time-zone" id="time-zone">America/Chicago</div>
@@ -36,14 +54,13 @@
     </div>
 
     <div class="future-forecast">
-        <div class="today" id="current-temp">
-            <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
-            <div class="other">
-                <div class="day">Monday</div>
+        <div class="weather-forecast" id="weather-forecast">
+            <div class="weather-forecast-item">
+                <div class="day">Mon</div>
+                <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
                 <div class="temp">Night - 25.6&#176; F</div>
                 <div class="temp">Day - 35.6&#176; F</div>
             </div>
-        </div>
 
         <div class="weather-forecast" id="weather-forecast">
             <div class="weather-forecast-item">

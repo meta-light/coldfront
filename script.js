@@ -24,7 +24,7 @@ setInterval(() => {
 
     timeEl.innerHTML = (hoursIn12HrFormat < 10? '0'+hoursIn12HrFormat : hoursIn12HrFormat) + ':' + (minutes < 10? '0'+minutes: minutes)+ ' ' + `<span id="am-pm">${ampm}</span>`
 
-    dateEl.innerHTML = days[day] + ', ' + date+ ' ' + months[month]
+    dateEl.innerHTML = days[day] + ', ' + date + ' ' + months[month]
 
 }, 1000);
 
@@ -32,7 +32,7 @@ getWeatherData()
 function getWeatherData () {
     navigator.geolocation.getCurrentPosition((success) => {
         
-        let {latitude, longitude } = success.coords;
+        let { latitude, longitude } = success.coords;
 
         fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=imperial&appid=${API_KEY}`).then(res => res.json()).then(data => {
 
@@ -80,9 +80,9 @@ function showWeatherData (data){
             currentTempEl.innerHTML = `
             <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
             <div class="other">
-                <div class="day">${window.moment(day.dt*1000).format('ddd')}</div>
-                <div class="temp">Night - ${day.temp.night}&#176;C</div>
-                <div class="temp">Day - ${day.temp.day}&#176;C</div>
+                <div class="day">${window.moment(day.dt*1000).format('dddd')}</div>
+                <div class="temp">Night - ${day.temp.night}&#176;F</div>
+                <div class="temp">Day - ${day.temp.day}&#176;F</div>
             </div>
             
             `
@@ -91,8 +91,8 @@ function showWeatherData (data){
             <div class="weather-forecast-item">
                 <div class="day">${window.moment(day.dt*1000).format('ddd')}</div>
                 <img src="http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png" alt="weather icon" class="w-icon">
-                <div class="temp">Night - ${day.temp.night}&#176;C</div>
-                <div class="temp">Day - ${day.temp.day}&#176;C</div>
+                <div class="temp">Night - ${day.temp.night}&#176;F</div>
+                <div class="temp">Day - ${day.temp.day}&#176;F</div>
             </div>
             
             `
