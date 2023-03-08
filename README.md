@@ -7,4 +7,6 @@
 * [word doc](https://uark-my.sharepoint.com/:w:/g/personal/rmt019_uark_edu/EVeCtVPPRJJDtaBKlcYxSmUBnxIZ3L3mNdHZM-Ge21Szww?e=4%3AwKx2CP&at=9)
 
 
+[![Deploy with Vercel](https://vercel.com/button)](https://coldfront.vercel.app/)
+
 * Github Commit from CLI: ```git commit -a -m "my commit message"```
