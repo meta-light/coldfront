@@ -1,7 +1,6 @@
 # coldfront
-[![Stars](https://img.shields.io/github/stars/metaplex-foundation/sugar?style=social)](https://img.shields.io/github/stars/meta-lite/coldfront?style=social)
-[![Forks](https://img.shields.io/github/forks/metaplex-foundation/sugar?style=social)](https://img.shields.io/github/forks/meta-lite/coldfront?style=social)
-[![License](https://img.shields.io/crates/l/sugar-cli)](https://github.com/meta-lite/coldfront/blob/main/LICENSE)
+[![Stars](https://img.shields.io/github/stars/meta-lite/coldfront?style=social)](https://img.shields.io/github/stars/meta-lite/coldfront?style=social)
+[![Forks](https://img.shields.io/github/forks/meta-lite/coldfront?style=social)](https://img.shields.io/github/forks/meta-lite/coldfront?style=social)
 [![Deploy with Vercel](https://vercel.com/button)](https://coldfront.vercel.app/)
 
 ## dev links
