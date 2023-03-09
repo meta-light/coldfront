@@ -16,3 +16,4 @@ Coldfront is a simple web application focused on sharing public weather data and
 * [widget](https://surfing-waves.com/feed.htm)
 
 * Github Commit from CLI: ```git commit -a -m "my commit message"```
+* Format Code: ```Shift + Option + F```
