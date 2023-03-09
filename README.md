@@ -14,6 +14,7 @@ Coldfront is a simple web application focused on sharing public weather data and
 * [GitLab](https://git.uark.edu/mstang/coldfront/-/wikis/home)
 * [Sprints Document](https://uark-my.sharepoint.com/:w:/g/personal/rmt019_uark_edu/EVeCtVPPRJJDtaBKlcYxSmUBnxIZ3L3mNdHZM-Ge21Szww?e=4%3AwKx2CP&at=9)
 * [widget](https://surfing-waves.com/feed.htm)
+* [twitter publish](https://publish.twitter.com/#)
 
 * Github Commit from CLI: ```git commit -a -m "my commit message"```
 * Format Code: ```Shift + Option + F```
