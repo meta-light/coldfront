@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +12,7 @@
 <nav><img src="media/vector/default-monochrome-white.svg" class="center"></nav>
 
 <body>
-    
+
     <div class="container">
         <div class="current-info">
 
@@ -22,35 +23,74 @@
                 <div class="date" id="date">
 
                 </div>
-
                 <div class="others" id="current-weather-items"> <!--for humidity & other weather specs-->
-                    
-                    
+
+
                 </div>
 
                 <div class="others" id="current-weather-items"> <!--for game predictions-->
-                    
-                    
+
+
                 </div>
             </div>
 
             <main>
                 <div class="news-container">
-                <h1>ColdFront Newsfeed</h1>
+                    <h1>ColdFront Razorbacks Newsfeed</h1>
                     <br>
-                    <h2>News article title (H2)</h2>
-                <p>'p' example - Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum Lorium ipsum</p>
+
+                    <script type="text/javascript">
+                        rssfeed_url = new Array();
+                        rssfeed_url[0] = "https://rss.app/feeds/24O2ASfr7Fa54lmk.xml";
+                        rssfeed_frame_width = "500";
+                        rssfeed_frame_height = "260";
+                        rssfeed_scroll = "on";
+                        rssfeed_scroll_step = "6";
+                        rssfeed_scroll_bar = "off";
+                        rssfeed_target = "_blank";
+                        rssfeed_font_size = "12";
+                        rssfeed_font_face = "";
+                        rssfeed_border = "on";
+                        rssfeed_css_url = "";
+                        rssfeed_title = "on";
+                        rssfeed_title_name = "";
+                        rssfeed_title_bgcolor = "#3366ff";
+                        rssfeed_title_color = "#fff";
+                        rssfeed_title_bgimage = "";
+                        rssfeed_footer = "off";
+                        rssfeed_footer_name = "rss feed";
+                        rssfeed_footer_bgcolor = "#fff";
+                        rssfeed_footer_color = "#333";
+                        rssfeed_footer_bgimage = "";
+                        rssfeed_item_title_length = "50";
+                        rssfeed_item_title_color = "#666";
+                        rssfeed_item_bgcolor = "#fff";
+                        rssfeed_item_bgimage = "";
+                        rssfeed_item_border_bottom = "on";
+                        rssfeed_item_source_icon = "off";
+                        rssfeed_item_date = "off";
+                        rssfeed_item_description = "on";
+                        rssfeed_item_description_length = "120";
+                        rssfeed_item_description_color = "#666";
+                        rssfeed_item_description_link_color = "#333";
+                        rssfeed_item_description_tag = "off";
+                        rssfeed_no_items = "0";
+                        rssfeed_cache = "d2bc86fc36b53101ce70b3b0ed529cd6";
+
+                    </script>
+                    <script type="text/javascript" src="//feed.surfing-waves.com/js/rss-feed.js"></script>
+                    <div style="color:#ccc;font-size:10px; text-align:right; width:500px;">powered by <a
+                            href="https://surfing-waves.com" rel="noopener" target="_blank" style="color:#ccc;">Surfing
+                            Waves</a></div>
                 </div>
-
             </main>
-
             <div class="place-container">
                 <div class="time-zone" id="time-zone">America/Chicago</div>
                 <div id="country" class="country">USA</div>
             </div>
         </div>
 
-        
+
     </div>
 
     <div class="future-forecast">
@@ -98,8 +138,11 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+        integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
     <script src="script.js"></script>
 </body>
+
 </html>
