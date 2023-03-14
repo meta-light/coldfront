@@ -33,10 +33,7 @@ main {
 	gap: 32px;
     margin-top: 100px;
     display: flex;
-    background: rgba(22, 22, 22, 0.419);
     padding:18px;
-    border-radius: 10px;
-    border: 1px solid #eee;
 }
 
 h1 {
