@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;700&display=swap');
 
 *{
-    box-sizing: border-box;
     margin:0;
     padding:0;
 }
@@ -11,6 +10,32 @@ nav{
     margin-top: 20px;
     max-width: 280px;
     max-height: 280px;
+}
+
+nav.left{
+    margin-top: -45px;
+    margin-left: 1580px;
+    margin-right: 45px;
+}
+
+nav ul li a {
+	text-decoration: none;
+	width: fit-content;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    display: inline-block;
+    list-style-type: none;
+}
+  
+nav ul li:first-child {
+    margin-right: auto;
 }
 
 body{
@@ -23,7 +48,7 @@ body{
 }
 
 .container{
-    padding: 0px 70px;
+    padding: 10px 40px;
     color:#fff;
 }
 
