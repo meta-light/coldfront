@@ -5,6 +5,10 @@
     padding:0;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 nav{
     padding-left: 10px;
     margin-top: 20px;
@@ -42,14 +46,20 @@ body{
     background: #3288AF;
     background-repeat: no-repeat;
     background-size:cover;
-    overflow:hidden;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
 
-.container{
-    padding: 10px 40px;
-    color:#fff;
+.news-container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 90px;
+}
+
+.radar-container{
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 main {
@@ -59,6 +69,11 @@ main {
     margin-top: 100px;
     display: flex;
     padding:18px;
+}
+
+.container{
+    padding: 10px 40px;
+    color:#fff;
 }
 
 h1 {
