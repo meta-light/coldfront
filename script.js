@@ -39,19 +39,24 @@ function getPrediction() {
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=36.0647&lon=-94.1744&exclude=hourly,minutely&units=imperial&appid=${API_KEY}`)
     .then(res => res.json())
     .then(data => {
-        const rainChance = data.daily[0].rain ? `${data.daily[0].rain} inches` : '0 inches';
-        console.log(`The chance of rain in Fayetteville, AR is ${rainChance}.`);
-        showPrediction(data);
+        const rainAmount = data.daily[0].rain ? data.daily[0].rain : 0;
+        const willCancel = rainAmount >= 0.5 ? 'Yes' : 'No';
+        console.log(`Will the baseball game be cancelled due to rain in Fayetteville, AR? ${willCancel}`);
+        showPrediction(data, willCancel);
     })
     .catch(error => console.error(error));
 }
 
-function showPrediction (data){
-    let rainChance = data.daily[0].rain ? `${data.daily[0].rain} inches` : '0 inches';
+function showPrediction(data, willCancel) {
+    let rainChance = data.daily[0].pop ? `${data.daily[0].pop * 100}%` : '0%';
     currentPredictionEl.innerHTML = 
     `<div class="weather-item">
-        <div>Rain Chance</div>
+        <div>Chance of Rain at Baum-Walker:</div>
         <div>${rainChance}</div>
+    </div>
+    <div class="weather-item">
+        <div>Will Razorbacks game be cancelled?</div>
+        <div>${willCancel}</div>
     </div>`;
 }
 
@@ -61,6 +66,9 @@ function showWeatherData (data){
     countryEl.innerHTML = data.lat + 'N ' + data.lon+'E'
     currentWeatherItemsEl.innerHTML = 
     `<div class="weather-item">
+        <div>Your Current Conditions:</div>
+    </div>
+    <div class="weather-item">
         <div>Humidity</div>
         <div>${humidity}%</div>
     </div>
