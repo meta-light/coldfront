@@ -9,37 +9,30 @@ html{
     scroll-behavior: smooth;
 }
 
-nav{
-    padding-left: 10px;
-    margin-top: 20px;
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	position: fixed;
+	top: 10px;
+	width: calc(100% - 64px);
+	padding: 0 32px;
+	transition: 0.5s;
+}
+
+nav .right {
+	display: flex;
+	align-items: center;
+	gap: 32px;
+}
+
+nav > img{
     max-width: 280px;
     max-height: 280px;
 }
 
-nav.left{
-    margin-top: -45px;
-    margin-left: 1580px;
-    margin-right: 45px;
-}
-
-nav ul li a {
-	text-decoration: none;
-	width: fit-content;
-}
-
-nav ul {
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-nav ul li {
-    display: inline-block;
-    list-style-type: none;
-}
-  
-nav ul li:first-child {
-    margin-right: auto;
+nav > * {
+	z-index: 2;
 }
 
 body{
@@ -72,7 +65,7 @@ main {
 }
 
 .container{
-    padding: 10px 40px;
+    padding: 50px 40px;
     color:#fff;
 }
 
