@@ -9,21 +9,21 @@ html{
     scroll-behavior: smooth;
 }
 
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
 nav {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	position: fixed;
-	top: 10px;
+	top: 20px;
 	width: calc(100% - 64px);
 	padding: 0 32px;
 	transition: 0.5s;
-}
-
-nav .right {
-	display: flex;
-	align-items: center;
-	gap: 32px;
 }
 
 nav > img{
@@ -31,14 +31,111 @@ nav > img{
     max-height: 280px;
 }
 
-nav > * {
-	z-index: 2;
+label .menu {
+    position: absolute;
+    right: -110px;
+    top: -110px;
+    z-index: 100;
+    width: 200px;
+    height: 200px;
+    background: #3288AF;
+    border-radius: 50% 50% 50% 50%;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    box-shadow: transparent;
+    cursor: pointer;
 }
 
-body{
+label .hamburger {
+    position: absolute;
+    top: 135px;
+    left: 50px;
+    width: 30px;
+    height: 2px;
+    background: #69D2e7;
+    display: block;
+    -webkit-transform-origin: center;
+    transform-origin: center;
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+}
+
+label .hamburger:after,
+label .hamburger:before {
+    -webkit-transition: .5s ease-in-out;
+    transition: .5s ease-in-out;
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #69d2e7;
+}
+
+label .hamburger:before {
+    top: -8px;
+}
+
+label .hamburger:after {
+    bottom: -8px;
+}
+
+label input {
+    display: none;
+}
+
+label input:checked+.menu {
+    box-shadow: 0 0 0 100vw #3288AF, 0 0 0 100vh #3288AF;
+    border-radius: 0;
+}
+
+label input:checked+.menu .hamburger {
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+label input:checked+.menu .hamburger:after {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    bottom: 0;
+}
+
+label input:checked+.menu .hamburger:before {
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg);
+    top: 0;
+}
+
+label input:checked+.menu+ul {
+    opacity: 1;
+}
+
+label ul {
+    z-index: 200;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    -webkit-transition: .25s 0s ease-in-out;
+    transition: .25s 0s ease-in-out;
+}
+
+label a {
+    margin-bottom: 1em;
+    display: block;
+    color: #FFF;
+    text-decoration: none;
+    font-size: 24px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    padding-top: 20px;
     background: #3288AF;
     background-repeat: no-repeat;
-    background-size:cover;
+    background-size: cover;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
 }
@@ -55,15 +152,6 @@ body{
     justify-content: center;
 }
 
-main {
-	max-width: 600px;
-	display: flex;
-	gap: 32px;
-    margin-top: 100px;
-    display: flex;
-    padding:18px;
-}
-
 .container{
     padding: 50px 40px;
     color:#fff;
@@ -78,7 +166,7 @@ h1 {
 }
 
 h2 {
-	font-family: 'Satoshi', sans-serif;
+	font-family: 'Poppins', sans-serif;
 	font-size: 15px;
 	line-height: 150%;
 	display: flex;
@@ -99,16 +187,16 @@ p{
     font-weight: 100;
 }
 .date-container .time{
-    font-size: 70px;
+    font-size: 60px;
 }
 
 .date-container #am-pm{
-    font-size: 30px;
+    font-size: 25px;
     margin-left: 20px;
 }
 
 .date-container .date{
-    font-size: 30px;
+    font-size: 25px;
 }
 
 .place-container{
@@ -116,7 +204,7 @@ p{
 }
 
 .place-container .time-zone{
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 100;
 }
 
