@@ -143,11 +143,12 @@ body {
 .news-container{
     display: flex;
     justify-content: center;
+    margin-top: 30px;
     margin-bottom: 90px;
 }
 
 .radar-container{
-    margin-top: 100px;
+    margin-top: 45px;
     display: flex;
     justify-content: center;
 }
