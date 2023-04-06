@@ -55,7 +55,7 @@ function showPrediction(data, willCancel) {
         <div>${rainChance}</div>
     </div>
     <div class="weather-item">
-        <div>Will Razorbacks game be cancelled?</div>
+        <div>Razorbacks Game Cancel Status:&nbsp;</div>
         <div>${willCancel}</div>
     </div>`;
 }
@@ -74,11 +74,11 @@ function showWeatherData (data){
     </div>
     <div class="weather-item">
         <div>Pressure</div>
-        <div>${pressure}</div>
+        <div>${pressure} hPa</div>
     </div>
     <div class="weather-item">
         <div>Wind Speed</div>
-        <div>${wind_speed}</div>
+        <div>${wind_speed} MPH</div>
     </div>
     <div class="weather-item">
         <div>Sunrise</div>
