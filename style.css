@@ -20,7 +20,7 @@ nav {
 	align-items: center;
 	justify-content: space-between;
 	position: fixed;
-	top: 20px;
+    top: 8px;
 	width: calc(100% - 64px);
 	padding: 0 32px;
 	transition: 0.5s;
@@ -148,13 +148,13 @@ body {
 }
 
 .radar-container{
-    margin-top: 45px;
+    margin-top: 30px;
     display: flex;
     justify-content: center;
 }
 
 .container{
-    padding: 50px 40px;
+    padding: 30px 30px;
     color:#fff;
 }
 
