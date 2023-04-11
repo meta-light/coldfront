@@ -9,6 +9,7 @@ const currentPredictionEl = document.getElementById('current-prediction');
 const days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 const API_KEY ='49cc8c821cd2aff9af04c9f98c36eb74';
+let nextDate;
 
 setInterval(() => {
     const time = new Date();
@@ -51,6 +52,10 @@ function showPrediction(data, willCancel) {
     let rainChance = data.daily[0].pop ? `${data.daily[0].pop * 100}%` : '0%';
     currentPredictionEl.innerHTML = 
     `<div class="weather-item">
+        <div>Next Game:</div>
+        <div>${nextDate}</div>
+    </div>
+    <div class="weather-item">
         <div>Chance of Rain at Baum-Walker:</div>
         <div>${rainChance}</div>
     </div>
@@ -59,6 +64,30 @@ function showPrediction(data, willCancel) {
         <div>${willCancel}</div>
     </div>`;
 }
+
+function getNextDate() {
+  const xhr = new XMLHttpRequest();
+  xhr.onload = function() {
+    if (xhr.readyState === XMLHttpRequest.DONE) {
+      if (xhr.status === 200) {
+        const gameData = JSON.parse(xhr.responseText);
+        // Get the current date
+        const currentDate = new Date().toISOString().split('T')[0];
+        // Find the next date in the game_dates array
+        nextDate = gameData.game_dates.find(date => date > currentDate); // Assign value to global variable
+        // Log the next date to the console
+        console.log('Next Date:', nextDate);
+      } else {
+        console.error('Failed to fetch game data:', xhr.statusText);
+      }
+    }
+  };
+  // Open and send the request to fetch the JSON data
+  xhr.open('GET', 'gamedata.json', true);
+  xhr.send();
+}
+
+getNextDate();
 
 function showWeatherData (data){
     let {humidity, pressure, sunrise, sunset, wind_speed} = data.current;
