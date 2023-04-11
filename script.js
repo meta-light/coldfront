@@ -41,7 +41,7 @@ function getPrediction() {
     .then(res => res.json())
     .then(data => {
         const rainAmount = data.daily[0].rain ? data.daily[0].rain : 0;
-        const willCancel = rainAmount >= 0.5 ? 'Yes' : 'No';
+        const willCancel = rainAmount >= 0.5 ? '✅' : '🚫';
         console.log(`Will the baseball game be cancelled due to rain in Fayetteville, AR? ${willCancel}`);
         showPrediction(data, willCancel);
     })
