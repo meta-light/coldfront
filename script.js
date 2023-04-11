@@ -56,11 +56,11 @@ function showPrediction(data, willCancel) {
         <div>${nextDate}</div>
     </div>
     <div class="weather-item">
-        <div>Chance of Rain at Baum-Walker:</div>
+        <div>Chance of Rain at Baum-Walker:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
         <div>${rainChance}</div>
     </div>
     <div class="weather-item">
-        <div>Razorbacks Game Cancel Status:&nbsp;</div>
+        <div>Razorbacks Game Status:&nbsp;</div>
         <div>${willCancel}</div>
     </div>`;
 }
