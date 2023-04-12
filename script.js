@@ -28,7 +28,7 @@ getWeatherData()
 function getWeatherData () {
     navigator.geolocation.getCurrentPosition((success) => {
         let { latitude, longitude } = success.coords;
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=hourly,minutely&units=imperial&appid=${API_KEY}`).then(res => res.json()).then(data => {
+        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=36.0647&lon=-94.1744&exclude=hourly,minutely&units=imperial&appid=${API_KEY}`).then(res => res.json()).then(data => {
         console.log(data)
         showWeatherData(data);
         })
@@ -95,7 +95,7 @@ function showWeatherData (data){
     countryEl.innerHTML = data.lat + 'N ' + data.lon+'E'
     currentWeatherItemsEl.innerHTML = 
     `<div class="weather-item">
-        <div>Your Current Conditions:</div>
+        <div>Fayetteville Current Conditions:</div>
     </div>
     <div class="weather-item">
         <div>Humidity</div>
