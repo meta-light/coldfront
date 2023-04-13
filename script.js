@@ -26,12 +26,9 @@ setInterval(() => {
 
 getWeatherData()
 function getWeatherData () {
-    navigator.geolocation.getCurrentPosition((success) => {
-        let { latitude, longitude } = success.coords;
-        fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=36.0647&lon=-94.1744&exclude=hourly,minutely&units=imperial&appid=${API_KEY}`).then(res => res.json()).then(data => {
-        console.log(data)
-        showWeatherData(data);
-        })
+    fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=36.0647&lon=-94.1744&exclude=hourly,minutely&units=imperial&appid=${API_KEY}`).then(res => res.json()).then(data => {
+    console.log(data)
+    showWeatherData(data);
     })
 }
 
@@ -107,10 +104,10 @@ const gameData = {
                     "2023-05-14"]
     };
 
-    function getNextDate() {
-        const currentDate = new Date().toISOString().split('T')[0];
-        return gameData.game_dates.find(date => date > currentDate);
-      }
+function getNextDate() {
+    const currentDate = new Date().toISOString().split('T')[0];
+    return gameData.game_dates.find(date => date > currentDate);
+}
 
 getNextDate();
 
