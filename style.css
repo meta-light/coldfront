@@ -260,11 +260,13 @@ p{
     background: #3c3c44;
     border-radius: 50px;
     text-align: center;
+    display: flex;
 }
 
 .future-forecast .today .temp{
     font-size: 18px;
     padding-top: 10px;
+    display: flex;
 }
 
 .future-forecast .weather-forecast{
@@ -288,11 +290,13 @@ p{
     background: #3C3C44;
     border-radius: 50px;
     text-align: center;
+    display: flex;
 }
 
 .weather-forecast .weather-forecast-item .temp{
     font-weight: 100;
     font-size: 12px;
+    display: flex;
 }
 
 
