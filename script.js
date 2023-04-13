@@ -49,6 +49,7 @@ function getPrediction() {
 }
 
 function showPrediction(data, willCancel) {
+    const nextDate = getNextDate();
     let rainChance = data.daily[0].pop ? `${data.daily[0].pop * 100}%` : '0%';
     currentPredictionEl.innerHTML = 
     `<div class="weather-item">
@@ -65,27 +66,51 @@ function showPrediction(data, willCancel) {
     </div>`;
 }
 
-function getNextDate() {
-  const xhr = new XMLHttpRequest();
-  xhr.onload = function() {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.status === 200) {
-        const gameData = JSON.parse(xhr.responseText);
-        // Get the current date
+const gameData = {
+    "game_dates" : ["2023-02-17", 
+                    "2023-02-18", 
+                    "2023-02-19",
+                    "2023-02-21",
+                    "2023-02-24",
+                    "2023-02-25",
+                    "2023-02-26",
+                    "2023-03-01",
+                    "2023-03-03",
+                    "2023-03-04",
+                    "2023-03-05",
+                    "2023-03-07",
+                    "2023-03-10",
+                    "2023-03-11",
+                    "2023-03-12",
+                    "2023-03-14",
+                    "2023-03-15",
+                    "2023-03-17",
+                    "2023-03-18",
+                    "2023-03-19",
+                    "2023-03-21",
+                    "2023-03-28",
+                    "2023-03-31",
+                    "2023-04-01",
+                    "2023-04-02",
+                    "2023-04-04",
+                    "2023-04-11",
+                    "2023-04-12",
+                    "2023-04-14",
+                    "2023-04-15",
+                    "2023-04-16",
+                    "2023-04-18",
+                    "2023-04-27",
+                    "2023-04-28",
+                    "2023-04-29",
+                    "2023-05-12",
+                    "2023-05-13",
+                    "2023-05-14"]
+    };
+
+    function getNextDate() {
         const currentDate = new Date().toISOString().split('T')[0];
-        // Find the next date in the game_dates array
-        nextDate = gameData.game_dates.find(date => date > currentDate); // Assign value to global variable
-        // Log the next date to the console
-        console.log('Next Date:', nextDate);
-      } else {
-        console.error('Failed to fetch game data:', xhr.statusText);
+        return gameData.game_dates.find(date => date > currentDate);
       }
-    }
-  };
-  // Open and send the request to fetch the JSON data
-  xhr.open('GET', 'gamedata.json', true);
-  xhr.send();
-}
 
 getNextDate();
 
