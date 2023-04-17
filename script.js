@@ -28,6 +28,7 @@ getWeatherData()
 function getWeatherData () {
     fetch(`https://api.openweathermap.org/data/2.5/onecall?lat=36.0647&lon=-94.1744&exclude=hourly,minutely&units=imperial&appid=${API_KEY}`).then(res => res.json()).then(data => {
     console.log(data)
+    console.log('Country & Timezone: ', data.timezone)
     showWeatherData(data);
     })
 }
@@ -50,16 +51,16 @@ function showPrediction(data, willCancel) {
     let rainChance = data.daily[0].pop ? `${data.daily[0].pop * 100}%` : '0%';
     currentPredictionEl.innerHTML = 
     `<div class="weather-item">
-        <div>Next Game:</div>
-        <div>${nextDate}</div>
+        <div><b>Next Game:</b></div>
+        <div><b>${nextDate}</b></div>
     </div>
     <div class="weather-item">
-        <div>Chance of Rain at Baum-Walker:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-        <div>${rainChance}</div>
+        <div><b>Chance of Rain at Baum-Walker:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></div>
+        <div><b>${rainChance}</b></div>
     </div>
     <div class="weather-item">
-        <div>Razorbacks Game Status:&nbsp;</div>
-        <div>${willCancel}</div>
+        <div><b>Razorbacks Game Status:&nbsp;</b></div>
+        <div><b>${willCancel}</b></div>
     </div>`;
 }
 
@@ -113,31 +114,29 @@ getNextDate();
 
 function showWeatherData (data){
     let {humidity, pressure, sunrise, sunset, wind_speed} = data.current;
-    timezone.innerHTML = data.timezone;
-    countryEl.innerHTML = data.lat + 'N ' + data.lon+'E'
     currentWeatherItemsEl.innerHTML = 
     `<div class="weather-item">
-        <div>Fayetteville Current Conditions:</div>
+        <div><b>Fayetteville Current Conditions:</b></div>
     </div>
     <div class="weather-item">
-        <div>Humidity</div>
-        <div>${humidity}%</div>
+        <div><b>Humidity</b></div>
+        <div><b>${humidity}%</b></div>
     </div>
     <div class="weather-item">
-        <div>Pressure</div>
-        <div>${pressure} hPa</div>
+        <div><b>Pressure</b></div>
+        <div><b>${pressure} hPa</b></div>
     </div>
     <div class="weather-item">
-        <div>Wind Speed</div>
-        <div>${wind_speed} MPH</div>
+        <div><b>Wind Speed</b></div>
+        <div><b>${wind_speed} MPH</b></div>
     </div>
     <div class="weather-item">
-        <div>Sunrise</div>
-        <div>${window.moment(sunrise * 1000).format('H:mm a')}</div>
+        <div><b>Sunrise</b></div>
+        <div><b>${window.moment(sunrise * 1000).format('H:mm a')}</b></div>
     </div>
     <div class="weather-item">
-        <div>Sunset</div>
-        <div>${window.moment(sunset*1000).format('H:mm a')}</div>
+        <div><b>Sunset</b></div>
+        <div><b>${window.moment(sunset*1000).format('H:mm a')}</b></div>
     </div>`;
 
     let otherDayForcast = ''
@@ -146,7 +145,7 @@ function showWeatherData (data){
             currentTempEl.innerHTML = `
             <img src="http://openweathermap.org/img/wn//${day.weather[0].icon}@4x.png" alt="weather icon" class="w-icon">
             <div class="other">
-                <div class="day">${window.moment(day.dt*1000).format('dddd')}</div>
+                <div class="day">${window.moment(day.dt*1000).format('ddd')}</div>
                 <div class="temp">Night - ${day.temp.night}&#176;F</div>
                 <div class="temp">Day - ${day.temp.day}&#176;F</div>
             </div>`

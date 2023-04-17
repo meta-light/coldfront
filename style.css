@@ -180,7 +180,7 @@ p{
 }
 
 .current-info{
-    display: flex;
+    display: center;
     justify-content: space-between;
     flex-wrap: wrap;
 }
