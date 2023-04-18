@@ -233,13 +233,14 @@ p {
     background: rgba(24, 24, 27, 0.6);
     padding: 15px;
     border-radius: 10px;
-    margin: 10px 0;
+    margin: 10px;
     border: 1px solid #eee;
 }
 
 .current-info .others .weather-item {
     display: flex;
     justify-content: space-between;
+
 }
 
 
