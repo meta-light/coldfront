@@ -136,16 +136,6 @@ body {
     padding-top: 43px;
     background: #3288AF;
     background-repeat: no-repeat;
-    overflow: hidden;
-    background-size: cover;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-}
-
-#scrollpage {
-    padding-top: 43px;
-    background: #3288AF;
-    background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
