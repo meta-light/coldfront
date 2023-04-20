@@ -171,21 +171,3 @@ if ("serviceWorker" in navigator) {
         console.log(error);
     });
 }
-
-var ath = addToHomescreen( {
-    onShow: function () {
-        console.log( "showing" );
-    },
-    onInit: function () {
-        console.log( "initializing" );
-    },
-    onAdd: function () {
-        console.log( "adding" );
-    },
-    onInstall: function () {
-        console.log( "Installing" );
-    },
-    onCancel: function () {
-        console.log( "Cancelling" );
-    }
-} );
