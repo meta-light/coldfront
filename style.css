@@ -22,7 +22,7 @@ nav {
     position: fixed;
     top: 8px;
     width: calc(100% - 64px);
-    padding: 0 15px;
+    padding: 0 5px;
     transition: 0.5s;
 }
 
