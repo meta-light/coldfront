@@ -22,7 +22,7 @@ nav {
     position: fixed;
     top: 8px;
     width: calc(100% - 64px);
-    padding: 0 32px;
+    padding: 0 15px;
     transition: 0.5s;
 }
 
@@ -49,9 +49,9 @@ label .menu {
 label .hamburger {
     position: absolute;
     top: 135px;
-    left: 55px;
+    left: 50px;
     width: 30px;
-    height: 2px;
+    height: 1px;
     background: #69D2e7;
     display: block;
     -webkit-transform-origin: center;
