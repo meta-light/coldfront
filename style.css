@@ -33,10 +33,10 @@ nav>img {
 
 label .menu {
     position: absolute;
-    right: -120px;
-    top: -120px;
+    right: -110px;
+    top: -110px;
     z-index: 100;
-    width: 200px;
+    width: 220px;
     height: 200px;
     background: #3288AF;
     border-radius: 50% 50% 50% 50%;
