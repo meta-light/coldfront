@@ -136,6 +136,7 @@ body {
     padding-top: 43px;
     background: #3288AF;
     background-repeat: no-repeat;
+    overflow-x: hidden;
     background-size: cover;
     height: 100vh;
     font-family: 'Poppins', sans-serif;
