@@ -1,7 +1,7 @@
 {
   "name": "ColdFront Analyitcs",
   "short_name": "ColdFront",
-  "start_url": "https://coldfront.vercel.app/index.html/",
+  "start_url": "https://coldfront.vercel.app/index.html",
   "display": "standalone",
   "background_color": "#3288af",
   "description": "Razor sharp weather analytics for the Razorbacks",
