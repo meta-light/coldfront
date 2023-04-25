@@ -142,15 +142,6 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-#scrollpage {
-    padding-top: 43px;
-    background: #3288AF;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-    font-family: 'Poppins', sans-serif;
-}
-
 .news-container {
     display: flex;
     justify-content: center;
