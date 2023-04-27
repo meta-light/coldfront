@@ -108,6 +108,13 @@ label input:checked+.menu .hamburger:before {
 
 label input:checked+.menu+ul {
     opacity: 1;
+    pointer-events: auto;
+}
+
+/* DISABLE POINTER EVENTS WHEN MENU IS UN-CHECKED */
+label input:not(:checked)+.menu+ul {
+    opacity: 0;
+    pointer-events: none;
 }
 
 label ul {
