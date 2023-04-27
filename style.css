@@ -149,6 +149,17 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+body.scroll{
+    padding-top: 43px;
+    background: #3288AF;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: auto;
+    background-size: cover;
+    height: 100vh;
+    font-family: 'Poppins', sans-serif;
+}
+
 .news-container {
     display: flex;
     justify-content: center;
