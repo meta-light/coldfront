@@ -238,6 +238,7 @@ p {
 
 .current-info .others {
     display: flex;
+    max-width: 500px;
     flex-direction: column;
     background: rgba(24, 24, 27, 0.6);
     padding: 15px;
